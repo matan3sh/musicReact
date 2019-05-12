@@ -41,8 +41,6 @@ const axiosInstance = axios.create({
     try {
       const value = await AsyncStorage.getItem(key);
       if (value !== null) {
-        // We have data!!
-        const parseValue = JSON.parse(value);
         return JSON.parse(value);
       }
     } catch (error) {
